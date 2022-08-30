@@ -1,0 +1,139 @@
+body{
+    background-image: url(./topography.svg), linear-gradient(
+110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    background-attachment: fixed;
+    letter-spacing: -1px;
+}
+
+h3{
+    margin: 0 0 5px 0;
+}
+button{
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 300px;
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+
+#menu-list{
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu li{
+    background: rgb(253, 253, 88);
+    display: block;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.top{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "hero hero cta1"
+        "hero hero cta2";
+
+}
+.hero{
+    grid-area: hero;
+    min-height: 300px;
+    max-width: 700px;
+    background: white url("https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.cta{
+    background: yellow;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    border-radius: 20px;
+}
+
+.hero > * {
+    background: yellow;
+    padding: 5px;
+}
+
+.features{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature{
+    background: white;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+}
+
+.feature p{
+    color: rgba(163, 88, 88, 0.5);
+}
+.feature .icon{
+    font-size: 50px;
+}
+
+.about{
+    background: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* repeat(number of columns/rows, the column width we want); */
+
+.gallery h2{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.gallery h2::before, .gallery h2::after{
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient( 45deg, #fef71a, transparent);
+}
+.gallery img{
+    border-radius: 25px;
+}
